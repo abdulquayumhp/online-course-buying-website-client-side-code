@@ -1,5 +1,6 @@
 import React from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Pricing = () => {
 	const coursePricing = useLoaderData();
@@ -19,6 +20,11 @@ const Pricing = () => {
 		Language,
 	} = coursePricing;
 	console.log(details);
+
+	const handelSubmitPrice = () => {
+		Swal.fire("Good job!", "Thank you to purchase our courses!", "success");
+	};
+
 	return (
 		<div className="bg-blue-900 text-white">
 			<section className="py-6 dark:bg-gray-800 dark:text-gray-50 pt-36">
@@ -108,9 +114,11 @@ const Pricing = () => {
 									<span>Lumet consectetur adipisicing</span>
 								</li>
 							</ul>
-							<button className="px-4 py-2 mt-4 font-semibold uppercase border rounded-lg md:mt-12 sm:py-3 sm:px-8 dark:border-violet-400">
+							<Link
+								onClick={() => handelSubmitPrice()}
+								className="px-4 py-2 mt-4 font-semibold uppercase border rounded-lg md:mt-12 sm:py-3 sm:px-8 dark:border-violet-400">
 								Subscribe
-							</button>
+							</Link>
 						</div>
 						<div className="relative flex flex-col items-center p-8 border-2 rounded-md dark:border-violet-400 dark:bg-gray-800">
 							<span className="absolute top-0 px-6 pt-1 pb-2 font-medium rounded-b-lg dark:bg-violet-400 dark:text-gray-900">
@@ -185,9 +193,11 @@ const Pricing = () => {
 									<span>Lumet consectetur facilis</span>
 								</li>
 							</ul>
-							<button className="px-8 py-3 mt-12 text-lg font-semibold uppercase rounded dark:bg-violet-400 dark:text-gray-900">
+							<Link
+								onClick={() => handelSubmitPrice()}
+								className="px-8 py-3 mt-12 text-lg font-semibold uppercase rounded dark:bg-violet-400 dark:text-gray-900">
 								Subscribe
-							</button>
+							</Link>
 						</div>
 						<div className="relative z-0 flex flex-col items-center p-8 border rounded-md dark:bg-gray-800">
 							<span className="absolute top-0 px-6 pt-1 pb-2 font-medium rounded-b-lg dark:bg-violet-400 dark:text-gray-900">
@@ -262,9 +272,11 @@ const Pricing = () => {
 									<span>Lumet consectetur adipisicing</span>
 								</li>
 							</ul>
-							<button className="px-8 py-3 mt-12 text-lg font-semibold uppercase border rounded dark:border-violet-400">
+							<Link
+								onClick={() => handelSubmitPrice()}
+								className="px-8 py-3 mt-12 text-lg font-semibold uppercase border rounded dark:border-violet-400">
 								Subscribe
-							</button>
+							</Link>
 						</div>
 					</div>
 				</div>
