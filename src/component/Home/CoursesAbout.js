@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const CoursesAbout = ({ curse }) => {
 	const { picture, balance, category, title, totalView, id } = curse;
-	console.log(curse);
+	// console.log(curse);
 	return (
 		<section className="py-6 bg-blue-900 dark:bg-gray-800 dark:text-gray-100">
 			<div className=" w-full  p-5 ">
@@ -15,7 +15,7 @@ const CoursesAbout = ({ curse }) => {
 							aria-label="Te nulla oportere reprimique his dolorum">
 							<img
 								alt=""
-								className="object-cover w-full h-52 dark:bg-gray-500"
+								className="object-cover w-[400px]  h-52 dark:bg-gray-500"
 								src={picture}
 							/>
 						</Link>
@@ -32,7 +32,7 @@ const CoursesAbout = ({ curse }) => {
 							</h3>
 							<div className="flex flex-wrap justify-between items-center pt-3 space-x-2 text-xs dark:text-gray-400">
 								<span className="text-xl">{balance}</span>
-								<Link className="bg-slate-100 py-2 px-4" to={`/curse/${id}`}>
+								<Link className="bg-slate-100 py-2 px-4" to={`/courses/${id}`}>
 									Know More
 								</Link>
 								<span>{totalView}</span>
