@@ -1,0 +1,7 @@
+.cures-container {
+	background: linear-gradient(rgba(6, 11, 50, 0.774), rgba(6, 15, 80, 0.5)),
+		url("https://www.mooc.org/hubfs/applications-of-computer-programming.jpg");
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+}
