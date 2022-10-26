@@ -25,7 +25,7 @@ const Login = () => {
 		loginWithUser(userInfo.email, userInfo.password)
 			.then(update => {
 				console.log(update.user);
-				Swal.fire("Good job!", "Thank you to purchase our courses!", "success");
+				Swal.fire("Good job!", "Successfully login", "success");
 				navigate(from, { replace: true });
 			})
 			.catch(error => {

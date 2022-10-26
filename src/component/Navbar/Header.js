@@ -53,13 +53,6 @@ const Header = () => {
 									Blog
 								</Link>
 							</li>
-							<li className="flex">
-								<Link
-									to="/courses"
-									className="flex items-center px-4 md:-mb-1 border-b-2 dark:border-transparent text-orange-200">
-									Courses
-								</Link>
-							</li>
 						</ul>
 					</div>
 

@@ -94,9 +94,9 @@ const CurseDetails = () => {
 						</div>
 					</div>
 					<Link
-						to={`/pricing/${id}`}
+						to={`/checkout/${id}`}
 						className="bg-blue-700 py-2 rounded-lg text-center">
-						Buy This Course
+						Get premium access
 					</Link>
 				</div>
 			</div>

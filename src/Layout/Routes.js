@@ -2,12 +2,12 @@ import { createBrowserRouter } from "react-router-dom";
 import Login from "../component/authentication/Login";
 import Register from "../component/authentication/Register";
 import Blog from "../component/Home/Blog";
+import ChechkOut from "../component/Home/ChechkOut";
 import Courses from "../component/Home/Courses";
 import CurseDetails from "../component/Home/CurseDetails";
 import ErrorPage from "../component/Home/ErrorPage";
 import Faq from "../component/Home/Faq";
 import Home from "../component/Home/Home";
-import Pricing from "../component/Home/Pricing";
 import PrivetRoute from "../component/privetRoute/PrivetRoute";
 import Main from "../Render/Main";
 
@@ -50,10 +50,10 @@ export const routes = createBrowserRouter([
 					fetch(`https://assaignment-eleven.vercel.app/courses/${params.id}`),
 			},
 			{
-				path: "/pricing/:id",
+				path: "/checkout/:id",
 				element: (
 					<PrivetRoute>
-						<Pricing />
+						<ChechkOut />
 					</PrivetRoute>
 				),
 				loader: ({ params }) =>
