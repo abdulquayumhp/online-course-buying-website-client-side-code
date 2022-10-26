@@ -1,12 +1,14 @@
 import React from "react";
 
+import { FaArrowRight, FaForumbee } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import "../../Customcss/Home.css";
 import Category from "./Category";
 
 const Home = () => {
 	return (
 		<div>
-			{/* <div className="home-container">
+			<div className="home-container">
 				<div className="flex md:flex-row flex-col ">
 					<div className="pt-36  text-white text-center md:text-left ">
 						<div className=" md:my-36 md:ml-36 text-center md:text-left ">
@@ -58,7 +60,7 @@ const Home = () => {
 					{/* end  */}
 				</div>
 				<Category />
-			</div> */}
+			</div>
 		</div>
 	);
 };
