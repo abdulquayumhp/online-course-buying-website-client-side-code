@@ -1,6 +1,7 @@
-import React from "react";
-import { FaEye } from "react-icons/fa";
+import React, { useRef } from "react";
+import { FaEye, FaFileDownload } from "react-icons/fa";
 import { Link, useLoaderData } from "react-router-dom";
+import { useReactToPrint } from "react-to-print";
 import "../../Customcss/details-container.css";
 
 const CurseDetails = () => {
@@ -20,12 +21,36 @@ const CurseDetails = () => {
 		totalView,
 		Language,
 	} = curseDetails;
+
+	const componentRef = useRef();
+	const handlePrint = useReactToPrint({
+		content: () => componentRef.current,
+		documentTitle: "emp-data",
+	});
+
 	return (
 		<div className="details-container pb-20">
-			<div className="pt-36">
-				<div className="container text-white bg-blue-800 flex flex-col w-full max-w-lg p-6 mx-auto divide-y rounded-md divide-gray-700 dark:bg-gray-900 dark:text-gray-100">
-					<div>
-						<img src={picture} alt="" />
+			<div ref={componentRef} style={{ width: "100%" }} className="pt-36">
+				<h1 className="text-center text-4xl font-medium pb-5 text-white">
+					Course Details
+				</h1>
+				<div className="container text-white bg-blue-800 flex flex-col w-full md:w-[1000px] p-6 mx-auto divide-y rounded-md divide-gray-700 dark:bg-gray-900 dark:text-gray-100">
+					<div className="flex justify-center ">
+						<div>
+							<img
+								className="w-full h-[500px] object-cover rounded-lg pr-2"
+								src={picture}
+								alt=""
+							/>
+						</div>
+						<div>
+							<div className="tooltip " data-tip="Download Pdf ">
+								<FaFileDownload
+									className="cursor-pointer text-5xl p-2 rounded-lg bg-blue-600"
+									onClick={handlePrint}
+								/>
+							</div>
+						</div>
 					</div>
 					<div className="flex justify-between p-4">
 						<div className="flex space-x-4">

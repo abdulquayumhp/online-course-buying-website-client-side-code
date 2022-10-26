@@ -1,16 +1,21 @@
 import { createBrowserRouter } from "react-router-dom";
+import Login from "../component/authentication/Login";
+import Register from "../component/authentication/Register";
 import Blog from "../component/Home/Blog";
 import Courses from "../component/Home/Courses";
 import CurseDetails from "../component/Home/CurseDetails";
+import ErrorPage from "../component/Home/ErrorPage";
 import Faq from "../component/Home/Faq";
 import Home from "../component/Home/Home";
 import Pricing from "../component/Home/Pricing";
+import PrivetRoute from "../component/privetRoute/PrivetRoute";
 import Main from "../Render/Main";
 
 export const routes = createBrowserRouter([
 	{
 		path: "/",
 		element: <Main />,
+		errorElement: <ErrorPage />,
 		children: [
 			{
 				path: "/courses",
@@ -26,8 +31,16 @@ export const routes = createBrowserRouter([
 				element: <Blog />,
 			},
 			{
+				path: "/login",
+				element: <Login />,
+			},
+			{
 				path: "/",
 				element: <Home />,
+			},
+			{
+				path: "/signIn",
+				element: <Register />,
 			},
 
 			{
@@ -38,7 +51,11 @@ export const routes = createBrowserRouter([
 			},
 			{
 				path: "/pricing/:id",
-				element: <Pricing />,
+				element: (
+					<PrivetRoute>
+						<Pricing />
+					</PrivetRoute>
+				),
 				loader: ({ params }) =>
 					fetch(`https://assaignment-eleven.vercel.app/courses/${params.id}`),
 			},

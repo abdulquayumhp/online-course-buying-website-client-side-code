@@ -17,7 +17,7 @@ const Courses = () => {
 				</h1>
 				{curses.map((curse, i) => (
 					<p className="ml-10 text-white text-xl mb-1" key={curse.id}>
-						<Link>
+						<Link to={`/courses/${curse.id}`}>
 							{i + 1}. {curse.category}
 						</Link>
 					</p>
