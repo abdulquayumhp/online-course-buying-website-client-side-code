@@ -32,7 +32,7 @@ const ChechkOut = () => {
 			"Thank you to purchase our courses! You will get a email on this email as soon as possible",
 			"success"
 		);
-		navigate("/");
+		navigate("/Courses");
 	};
 	return (
 		<div className="bg-blue-900 text-white">
@@ -63,6 +63,7 @@ const ChechkOut = () => {
 				</section>
 
 				<div className="h-full">
+					<p className="text-center text-4xl py-5">USER INFO</p>
 					<div className="max-w-md border-2  ml-5 p-8 sm:flex sm:space-x-6 dark:bg-gray-900 dark:text-gray-100">
 						<div className="flex-shrink-0 w-full mb-6 h-44 sm:h-32 sm:w-32 sm:mb-0">
 							<img

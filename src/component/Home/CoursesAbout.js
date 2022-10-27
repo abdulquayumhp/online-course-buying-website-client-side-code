@@ -16,7 +16,7 @@ const CoursesAbout = ({ curse }) => {
 							aria-label="Te nulla oportere reprimique his dolorum">
 							<img
 								alt=""
-								className="object-cover w-[400px]  h-52 dark:bg-gray-500"
+								className="object-cover w-full md:w-[400px]  h-52 dark:bg-gray-500"
 								src={picture}
 							/>
 						</Link>

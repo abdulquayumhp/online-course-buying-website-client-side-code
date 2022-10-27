@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import { FaFacebook, FaGithub, FaGoogle, FaTwitter } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { ContextCreate } from "../../AuthContextProvide/AuthContextProvide";
@@ -10,7 +11,13 @@ const Login = () => {
 
 	const from = location.state?.from?.pathname || "/";
 
-	const { loginWithUser, setLoading } = useContext(ContextCreate);
+	const {
+		loginWithUser,
+		setLoading,
+		GoogleSignUp,
+		faceBookLogin,
+		gitHubLogin,
+	} = useContext(ContextCreate);
 	const [userInfo, setUserInfo] = useState({
 		password: "",
 		email: "",
@@ -44,6 +51,33 @@ const Login = () => {
 	const passwordSubmit = e => {
 		const password = e.target.value;
 		setUserInfo({ ...userInfo, password: e.target.value });
+	};
+	const handleGoogleSignUser = () => {
+		GoogleSignUp()
+			.then(update => {
+				console.log(update.user);
+				navigate(from, { replace: true });
+			})
+			.catch(error => console.error(error));
+	};
+
+	const handleFacebookSignIn = () => {
+		faceBookLogin()
+			.then(update => {
+				const user = update.user;
+				console.log(user);
+				navigate(from, { replace: true });
+			})
+			.catch(error => console.error(error));
+	};
+	const handleGitHubSignIn = () => {
+		gitHubLogin()
+			.then(update => {
+				const user = update.user;
+				console.log(user);
+				navigate(from, { replace: true });
+			})
+			.catch(error => console.error(error));
 	};
 	return (
 		<div className="py-36">
@@ -90,6 +124,37 @@ const Login = () => {
 					</button>
 					{error.general && <p className="error-message">{error.general}</p>}
 				</form>
+				<div className="flex items-center pt-4 space-x-1">
+					<div className="flex-1 h-px sm:w-16 dark:bg-gray-700"></div>
+					<p className="px-3 text-sm dark:text-gray-400">
+						Login with social accounts
+					</p>
+					<div className="flex-1 h-px sm:w-16 dark:bg-gray-700"></div>
+				</div>
+				<div className="flex justify-center space-x-4">
+					<Link aria-label="Log in with Google" className="p-3 rounded-sm">
+						<FaGoogle onClick={handleGoogleSignUser} />
+					</Link>
+
+					<Link aria-label="Log in with Google" className="p-3 rounded-sm">
+						<FaGithub onClick={handleGitHubSignIn} />
+					</Link>
+					<Link aria-label="Log in with Google" className="p-3 rounded-sm">
+						<FaFacebook onClick={handleFacebookSignIn} />
+					</Link>
+					<Link aria-label="Log in with Google" className="p-3 rounded-sm">
+						<FaTwitter />
+					</Link>
+				</div>
+				<p className="text-xs text-center sm:px-6 dark:text-gray-400">
+					Don't have an account?
+					<a
+						rel="noopener noreferrer"
+						href="#"
+						className="underline dark:text-gray-100">
+						Sign up
+					</a>
+				</p>
 			</div>
 		</div>
 	);
