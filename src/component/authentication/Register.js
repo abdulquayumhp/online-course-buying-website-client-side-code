@@ -235,13 +235,10 @@ const Register = () => {
 					</Link>
 				</div>
 				<p className="text-xs text-center sm:px-6 dark:text-gray-400">
-					Don't have an account?
-					<a
-						rel="noopener noreferrer"
-						href="#"
-						className="underline dark:text-gray-100">
-						Sign up
-					</a>
+					Already have an account?
+					<Link to="/login" className="underline dark:text-gray-100">
+						Log In
+					</Link>
 				</p>
 			</div>
 		</div>

@@ -120,7 +120,7 @@ const Login = () => {
 						</div>
 					</div>
 					<button className="block w-full bg-white p-3 text-center rounded-sm dark:text-gray-900 dark:bg-violet-400">
-						Sign in
+						Log in
 					</button>
 					{error.general && <p className="error-message">{error.general}</p>}
 				</form>
@@ -148,12 +148,9 @@ const Login = () => {
 				</div>
 				<p className="text-xs text-center sm:px-6 dark:text-gray-400">
 					Don't have an account?
-					<a
-						rel="noopener noreferrer"
-						href="#"
-						className="underline dark:text-gray-100">
+					<Link to="/signIn" className="underline dark:text-gray-100">
 						Sign up
-					</a>
+					</Link>
 				</p>
 			</div>
 		</div>
