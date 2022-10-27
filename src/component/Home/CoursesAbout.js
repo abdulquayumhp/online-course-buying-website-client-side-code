@@ -6,7 +6,7 @@ const CoursesAbout = ({ curse }) => {
 	const { picture, balance, category, title, totalView, id } = curse;
 	// console.log(curse);
 	return (
-		<section className="py-6 bg-blue-900 dark:bg-gray-800 dark:text-gray-100">
+		<section className="py-6 bg-orange-200 dark:bg-gray-800 dark:text-gray-100 ">
 			<div className=" w-full  p-5 ">
 				<div className="   ">
 					<article className="flex flex-col dark:bg-gray-900 bg-white w-full">

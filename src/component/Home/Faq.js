@@ -17,7 +17,9 @@ const Faq = () => {
 								<img
 									alt=""
 									className="object-cover w-full h-52 dark:bg-gray-500"
-									src="https://source.unsplash.com/200x200/?fashion?1"
+									src={
+										"https://www.scholastic.com/content/dam/scholastic/educators/articles/sample-lesson-plan-new-teachers-lesson-plan_ART_4-3.jpg"
+									}
 								/>
 							</a>
 							<div className="flex flex-col flex-1 p-6">
@@ -48,7 +50,9 @@ const Faq = () => {
 								<img
 									alt=""
 									className="object-cover w-full h-52 dark:bg-gray-500"
-									src="https://source.unsplash.com/200x200/?fashion?2"
+									src={
+										"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREkCJGf1H5VMPwibT0Qo3uSnllSiphrTosUA&usqp=CAU"
+									}
 								/>
 							</a>
 							<div className="flex flex-col flex-1 p-6">
@@ -79,7 +83,9 @@ const Faq = () => {
 								<img
 									alt=""
 									className="object-cover w-full h-52 dark:bg-gray-500"
-									src="https://source.unsplash.com/200x200/?fashion?3"
+									src={
+										"https://www.minnpost.com/wp-content/uploads/2022/09/JamesCannon828.png?strip=all"
+									}
 								/>
 							</a>
 							<div className="flex flex-col flex-1 p-6">
@@ -110,7 +116,9 @@ const Faq = () => {
 								<img
 									alt=""
 									className="object-cover w-full h-52 dark:bg-gray-500"
-									src="https://source.unsplash.com/200x200/?fashion?4"
+									src={
+										"https://internationalteacherstraining.com/blog/wp-content/uploads/2017/07/20.03.2020-10-Essential-Needs-for-Teacher-Training-728x370.jpg"
+									}
 								/>
 							</a>
 							<div className="flex flex-col flex-1 p-6">

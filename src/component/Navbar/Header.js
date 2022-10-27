@@ -5,7 +5,7 @@ import { ContextCreate } from "../../AuthContextProvide/AuthContextProvide";
 
 const Header = () => {
 	const [open, setOpen] = useState(false);
-	const { user, logOut } = useContext(ContextCreate);
+	const { user, logOut, setThem, thems } = useContext(ContextCreate);
 	const handleLogOut = () => {
 		logOut()
 			.then(() => {})

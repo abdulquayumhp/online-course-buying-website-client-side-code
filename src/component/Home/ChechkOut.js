@@ -35,9 +35,9 @@ const ChechkOut = () => {
 		navigate("/Courses");
 	};
 	return (
-		<div className="bg-blue-900 text-white">
-			<div className="flex  justify-center pt-36">
-				<section className="border-2  dark:bg-gray-800 dark:text-gray-50 pb-10 ">
+		<div className="bg-blue-900 text-black">
+			<div className="flex  justify-center py-36">
+				<section className="border-2 bg-orange-200 text-black ">
 					<div className=" md:w-[800px] ">
 						<div className="">
 							<p className="text-center text-4xl py-5">{category}</p>
@@ -51,9 +51,9 @@ const ChechkOut = () => {
 								<p className="text-3xl py-5">Duration : {Duration}</p>
 								<p className="text-3xl py-5">Lecture : {lecture}</p>
 							</div>
-							<div className="mx-5">
+							<div className="mx-5 ">
 								<button
-									className=" border-2 my-2 py-2  w-full bg-blue-500 hover:bg-blue-300"
+									className=" border-2 my-2 py-2  w-full bg-orange-200 text-black  hover:bg-blue-300"
 									onClick={handelSubmitPrice}>
 									Bye This Corse
 								</button>
@@ -62,9 +62,9 @@ const ChechkOut = () => {
 					</div>
 				</section>
 
-				<div className="h-full">
-					<p className="text-center text-4xl py-5">USER INFO</p>
-					<div className="max-w-md border-2  ml-5 p-8 sm:flex sm:space-x-6 dark:bg-gray-900 dark:text-gray-100">
+				<div className="h-full ">
+					<p className="text-center text-4xl py-5 text-orange-200">USER INFO</p>
+					<div className="max-w-md border-2  ml-5 p-8 sm:flex sm:space-x-6 bg-orange-200 dark:text-gray-100">
 						<div className="flex-shrink-0 w-full mb-6 h-44 sm:h-32 sm:w-32 sm:mb-0">
 							<img
 								src={photoURL}
