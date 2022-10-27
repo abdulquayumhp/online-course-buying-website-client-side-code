@@ -29,7 +29,7 @@ const CoursesAbout = ({ curse }) => {
 							</Link>
 
 							<h3 className="flex-1 py-2 text-lg font-semibold leading-snug">
-								{title ? title.slice(0, 40) + "..." : title}
+								{title ? title.slice(0, 25) + "..." : title}
 							</h3>
 							<div className="flex flex-wrap justify-between items-center pt-3 space-x-2 text-xs dark:text-gray-400">
 								<span className="text-xl">{balance}</span>

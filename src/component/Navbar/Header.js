@@ -28,7 +28,7 @@ const Header = () => {
 					</Link>
 
 					<div
-						className={`flex m-0 p-0  text-white text-center md:text-cyan-700 absolute   lg:static  duration-500 ease-in-out z-10   bg-blue-800  md:w-0 w-full md:bg-white   ${
+						className={`flex m-0 p-0  text-blue-200 text-center md:text-cyan-700 absolute   lg:static  duration-500 ease-in-out z-10   bg-orange-800  md:w-0 w-full md:bg-white   ${
 							open ? "top-0" : "top-[-280px]"
 						}`}>
 						<ul className={` md:p-0 p-5  lg:flex-row flex-col flex mx-auto`}>
@@ -57,7 +57,7 @@ const Header = () => {
 					</div>
 
 					<div className=" flex lg:flex items-center">
-						<label className="swap swap-rotate">
+						<label className="swap swap-rotate ">
 							<input type="checkbox" />
 
 							<svg
@@ -107,14 +107,16 @@ const Header = () => {
 										<Link
 											to="/signIn"
 											className="self-center px-2 py-3 font-semibold rounded dark:bg-violet-400 dark:text-gray-900">
-											Sign In
+											Sign Up
 										</Link>
 									</>
 								)}
 							</>
 						</div>
 					</div>
-					<div className="p-4 lg:hidden z-10" onClick={() => setOpen(!open)}>
+					<div
+						className="p-4 lg:hidden z-10 text-red-900"
+						onClick={() => setOpen(!open)}>
 						{!open ? <FaBars /> : <FaTimes />}
 					</div>
 				</div>
