@@ -20,7 +20,7 @@ const Register = () => {
 		photoUrl: "",
 		email: "",
 	});
-
+	console.log(userInfo);
 	const [error, setError] = useState({
 		fullName: "",
 		password: "",
@@ -61,7 +61,7 @@ const Register = () => {
 		const fullName = e.target.value;
 
 		if (!/[ ]{1,}/.test(fullName)) {
-			setError({ ...error, fullName: "please provide a valid name" });
+			setError({ ...error, fullName: "need one space between fullName " });
 			setUserInfo({ ...userInfo, fullName: "" });
 		}
 		// console.log(fullName);
